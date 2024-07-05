@@ -61,9 +61,9 @@ export default function Loginpage() {
       setemail_check(checking);
   }
   }
-  const handleSubmit = async ()=>{
+  const handleSubmit = async (e)=>{
     
-    
+    e.preventDefault()
     if(checking.email_check&&checking.pass_check){
     const get_response= await fetch("https://codechef-mern.onrender.com/api/user/"+`${values.email_value}`);
     if(get_response.ok){
