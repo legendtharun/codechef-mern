@@ -157,7 +157,7 @@ export default function Loginpage() {
 }   
     if (checking.password_check&&checking.name_check&&checking.email_check&&checking.phone_check&&(!email_present)){ 
       setall_present_component(false);
-      const response = await fetch("http://localhost:4000/api/user/",{
+      const response = await fetch("https://codechef-mern.onrender.com/api/user/",{
       method:"POST",
       body:JSON.stringify(user_data),
       headers:{
