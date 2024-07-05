@@ -164,6 +164,8 @@ export default function Loginpage() {
         'Content-Type':'application/JSON'
       }
     })
+    const signup=document.getElementById("signupbut")
+    signup.disabled=true;
     navigate("/",{replace:true}) }
    else{
     setall_present_component(true);
@@ -339,6 +341,7 @@ export default function Loginpage() {
           </div>
           <div className="p-3 pl-[25px] pr-[25px] w-full">
             <button
+              id="signupbut"
               className="bg-blue-500 text-white rounded-3xl p-2 w-full hover:bg-blue-400 hover:-translate-y-1 font-bold text-2xl"
               onClick={handleSubmit}
             >
